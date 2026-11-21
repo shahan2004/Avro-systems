@@ -11,6 +11,8 @@ module.exports = {
     es2022: true
   },
   rules: {
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+    '@typescript-eslint/no-namespace': 'off',
     // INC-0304 Defence in depth rule:
     // Forbid importing internal notes repository in customer-facing routes or DTOs
     'no-restricted-imports': [

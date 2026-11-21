@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import pg from 'pg';
-import { config } from '../config.js';
 import { createPool } from './pool.js';
 
 export async function runMigrations(customPool?: pg.Pool): Promise<void> {

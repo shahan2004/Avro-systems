@@ -1,7 +1,6 @@
 import crypto from 'crypto';
 import pg from 'pg';
-import { pool, query } from '../db/pool.js';
-import { workingMinutesBetween } from './businessTime.js';
+import { pool } from '../db/pool.js';
 
 export interface AuditEvent {
   id: number;

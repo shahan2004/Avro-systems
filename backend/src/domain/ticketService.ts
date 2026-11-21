@@ -1,6 +1,6 @@
 import crypto from 'crypto';
 import pg from 'pg';
-import { pool, query } from '../db/pool.js';
+import { pool } from '../db/pool.js';
 import {
   Holidays,
   nextWorkingStart,
@@ -11,7 +11,6 @@ import {
   TicketStatus,
   computeBudgets,
   computeDue,
-  computeSlaState,
   SLA,
 } from './sla.js';
 import { insertAuditEvent } from './audit.js';
@@ -84,8 +83,9 @@ export async function createTicket(
   },
   clientOrPool: pg.PoolClient | pg.Pool = pool
 ): Promise<{ ticket: TicketRow; portalToken: string }> {
-  const client = 'connect' in clientOrPool ? await clientOrPool.connect() : clientOrPool;
-  const shouldRelease = 'connect' in clientOrPool;
+  const isPool = 'totalCount' in clientOrPool;
+  const client: pg.PoolClient = isPool ? await (clientOrPool as pg.Pool).connect() : (clientOrPool as pg.PoolClient);
+  const shouldRelease = isPool;
 
   try {
     const holidays = await getHolidays(client);
@@ -144,7 +144,7 @@ export async function createTicket(
 
     return { ticket, portalToken: token };
   } finally {
-    if (shouldRelease && 'release' in client) {
+    if (shouldRelease) {
       client.release();
     }
   }
@@ -335,7 +335,6 @@ export async function sendAgentReply(
     }
 
     const now = nowOverride || new Date();
-    const holidays = await getHolidays(client);
 
     // Insert public message
     const msgRes = await client.query<{ id: number }>(

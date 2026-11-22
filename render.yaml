@@ -24,4 +24,4 @@ databases:
   - name: frontdesk-db
     plan: free
     databaseName: frontdesk
-    user: postgres
+    user: frontdesk

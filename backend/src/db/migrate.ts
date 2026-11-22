@@ -8,7 +8,9 @@ export async function runMigrations(customPool?: pg.Pool): Promise<void> {
   const client = await p.connect();
 
   try {
-    const migrationsDir = path.resolve(__dirname, 'migrations');
+    const candidateDir1 = path.resolve(__dirname, 'migrations');
+    const candidateDir2 = path.resolve(__dirname, '../../src/db/migrations');
+    const migrationsDir = fs.existsSync(candidateDir1) ? candidateDir1 : candidateDir2;
     const files = fs.readdirSync(migrationsDir).filter(f => f.endsWith('.sql')).sort();
 
     console.log(`Running ${files.length} migrations...`);

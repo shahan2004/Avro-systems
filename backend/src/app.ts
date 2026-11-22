@@ -64,7 +64,7 @@ export function createApp(): express.Application {
   app.use('/api', errorHandler);
 
   // Static frontend serving and SPA fallback
-  const frontendDist = path.resolve(__dirname, '../../../frontend/dist');
+  const frontendDist = path.resolve(__dirname, '../../frontend/dist');
   if (fs.existsSync(frontendDist)) {
     app.use(express.static(frontendDist));
     app.get('*', (req: Request, res: Response) => {

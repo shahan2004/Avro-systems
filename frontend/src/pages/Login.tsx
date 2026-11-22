@@ -95,7 +95,7 @@ export const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
               style={{ flex: 1, fontSize: '0.75rem', padding: '6px' }}
               onClick={() => setDemoUser('meera@arvo.test')}
             >
-              👑 Meera (Lead)
+              Meera (Lead)
             </button>
             <button
               type="button"
@@ -103,7 +103,7 @@ export const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
               style={{ flex: 1, fontSize: '0.75rem', padding: '6px' }}
               onClick={() => setDemoUser('agent1@arvo.test')}
             >
-              👤 Rahul (Agent 1)
+              Rahul (Agent 1)
             </button>
             <button
               type="button"
@@ -111,7 +111,7 @@ export const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
               style={{ flex: 1, fontSize: '0.75rem', padding: '6px' }}
               onClick={() => setDemoUser('agent2@arvo.test')}
             >
-              👤 Priya (Agent 2)
+              Priya (Agent 2)
             </button>
           </div>
         </div>

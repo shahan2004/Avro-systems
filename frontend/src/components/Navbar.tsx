@@ -56,7 +56,7 @@ export const Navbar: React.FC<NavbarProps> = ({ user, onLogout }) => {
           <div style={{ textAlign: 'right', fontSize: '0.8125rem' }}>
             <div style={{ fontWeight: 600, color: '#0f172a' }}>{user.name}</div>
             <div style={{ color: '#64748b', textTransform: 'capitalize' }}>
-              {user.role === 'lead' ? '⭐ Support Lead' : 'Support Agent'}
+              {user.role === 'lead' ? 'Support Lead' : 'Support Agent'}
             </div>
           </div>
           <button onClick={handleLogout} className="btn-secondary" style={{ padding: '6px 12px', display: 'flex', alignItems: 'center', gap: '4px' }}>

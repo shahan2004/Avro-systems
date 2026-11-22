@@ -165,7 +165,7 @@ export const Reports: React.FC<ReportsProps> = () => {
 
         {lateTickets.length === 0 ? (
           <div style={{ padding: '24px', textAlign: 'center', color: '#16a34a' }}>
-            🎉 No late tickets! All tickets are within SLA promises.
+            No late tickets! All tickets are within SLA promises.
           </div>
         ) : (
           <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.875rem' }}>

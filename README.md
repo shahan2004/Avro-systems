@@ -8,7 +8,7 @@
 ## 1. Quick Overview
 
 - **Repository Link:** [https://github.com/shahan2004/Avro-systems](https://github.com/shahan2004/Avro-systems)
-- **Live URL:** [https://frontdesk-app.onrender.com](https://frontdesk-app.onrender.com) *(Render deployment via `render.yaml`)*
+- **Live URL:** [https://frontdesk-app-si2p.onrender.com](https://frontdesk-app-si2p.onrender.com) *(Render live deployment)*
 - **Customer Portal:** `/portal/new`
 - **Agent / Lead Login:** `/login`
 

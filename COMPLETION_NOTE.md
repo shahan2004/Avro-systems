@@ -1,6 +1,7 @@
 # Completion Note — Frontdesk (Arvo Systems)
 
 - **Repository:** https://github.com/shahan2004/Avro-systems
+- **Live URL:** https://frontdesk-app-si2p.onrender.com
 - **Specification:** iNav Technologies Full Stack Developer Hiring Test
 
 ## 1. Done (Verified by Tests & Live Smoke Test)

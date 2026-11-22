@@ -1,5 +1,8 @@
 # Completion Note — Frontdesk (Arvo Systems)
 
+- **Repository:** https://github.com/shahan2004/Avro-systems
+- **Specification:** iNav Technologies Full Stack Developer Hiring Test
+
 ## 1. Done (Verified by Tests & Live Smoke Test)
 
 - [x] **Business-Time Engine (`backend/src/domain/businessTime.ts`)**:
